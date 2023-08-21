@@ -30,7 +30,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"firebase": "^9.19.1",
+		"firebase": "^10.2.0",
 		"firebaseui": "^6.0.2",
 		"redaxios": "^0.5.1",
 		"uuid": "^9.0.0"
