@@ -11,6 +11,22 @@ todos.subscribe((value) => {
 	}
 });
 
+export const getDoneTodos = () => {
+	let doneTodos = [];
+	todos.subscribe((value) => {
+		doneTodos = value.filter((todo) => todo.complete);
+	})();
+	return doneTodos;
+};
+
+export const getUndoneTodos = () => {
+	let undoneTodos = [];
+	todos.subscribe((value) => {
+		undoneTodos = value.filter((todo) => !todo.complete);
+	})();
+	return undoneTodos;
+};
+
 export const addTodo = () => {
 	todos.update((currentTodos) => {
 		return [...currentTodos, { id: uuidv4(), text: '', complete: false }];
